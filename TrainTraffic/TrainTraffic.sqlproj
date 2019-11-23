@@ -60,7 +60,7 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Security\CREATE SCHEMA.sql" />
+    <Build Include="Security\CREATE SCHEMAS.sql" />
     <Build Include="Tables\CREATE TABLE land.train45.sql" />
   </ItemGroup>
 </Project>
