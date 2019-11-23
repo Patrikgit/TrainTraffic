@@ -1,6 +1,6 @@
 ﻿
 CREATE TABLE [land].[train45] (
-	[PKrow]	int not null,
+	[PKrow]	int not null IDENTITY,
     [cancelled]                                VARCHAR (50) NULL,
     [commuterLineID]                           VARCHAR (50) NULL,
     [departureDate]                            VARCHAR (50) NULL,
