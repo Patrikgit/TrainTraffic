@@ -1,5 +1,6 @@
 ﻿
 CREATE TABLE [land].[train45] (
+	[PKrow]	int not null,
     [cancelled]                                VARCHAR (50) NULL,
     [commuterLineID]                           VARCHAR (50) NULL,
     [departureDate]                            VARCHAR (50) NULL,
@@ -33,7 +34,8 @@ CREATE TABLE [land].[train45] (
     [trainCategory]                            VARCHAR (50) NULL,
     [trainNumber]                              VARCHAR (50) NULL,
     [trainType]                                VARCHAR (50) NULL,
-    [version]                                  VARCHAR (50) NULL
+    [version]                                  VARCHAR (50) NULL, 
+    CONSTRAINT [PKrow] PRIMARY KEY ([PKrow])
 );
 
 
