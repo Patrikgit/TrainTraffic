@@ -11,8 +11,8 @@
   DTS:LocaleID="1053"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{084D371B-99DF-43CC-BFAD-CC9A72DD7DAB}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{B9F54693-045C-40A6-BC5D-94E77BDF51E4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -356,13 +356,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\load train45"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{F4D6DDDF-960A-4E5B-B04B-96B0DD3E88EA}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="load train45"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -370,1028 +370,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1053"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[CSV_train45]"
-                  connectionManagerRefId="Package.ConnectionManagers[CSV_train45]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]"
-                      name="cancelled"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[commuterLineID]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[commuterLineID]"
-                      name="commuterLineID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[departureDate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[departureDate]"
-                      name="departureDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorShortCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorShortCode]"
-                      name="operatorShortCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorUICCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorUICCode]"
-                      name="operatorUICCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[runningCurrently]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[runningCurrently]"
-                      name="runningCurrently"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
-                      name="timeTableRowActualTime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
-                      name="timeTableRowCancelled"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
-                      name="timeTableRowCausesCategoryCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
-                      name="timeTableRowCausesCategoryCodeId"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
-                      name="timeTableRowCausesDetailedCategoryCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
-                      name="timeTableRowCausesDetailedCategoryCodeId"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
-                      name="timeTableRowCausesThirdCategoryCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
-                      name="timeTableRowCausesThirdCategoryCodeId"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
-                      name="timeTableRowCommercialStop"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
-                      name="timeTableRowCommercialTrack"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
-                      name="timeTableRowCountryCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
-                      name="timeTableRowDifferenceInMinutes"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
-                      name="timeTableRowEstimateSource"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
-                      name="timeTableRowLiveEstimateTime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
-                      name="timeTableRowScheduledTime"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
-                      name="timeTableRowStationShortCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
-                      name="timeTableRowStationUICCode"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
-                      name="timeTableRowTrainReadyAccepted"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
-                      name="timeTableRowTrainReadySource"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
-                      name="timeTableRowTrainReadyTimestamp"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
-                      name="timeTableRowTrainStopping"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowType]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowType]"
-                      name="timeTableRowType"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
-                      name="timetableAcceptanceDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableType]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableType]"
-                      name="timetableType"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainCategory]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainCategory]"
-                      name="trainCategory"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainNumber]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainNumber]"
-                      name="trainNumber"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainType]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainType]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainType]"
-                      name="trainType"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[version]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[version]"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[version]"
-                      name="version"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="cancelled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="commuterLineID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="departureDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="operatorShortCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="operatorUICCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="runningCurrently" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowActualTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCancelled" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesCategoryCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesCategoryCodeId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesDetailedCategoryCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesDetailedCategoryCodeId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesThirdCategoryCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCausesThirdCategoryCodeId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCommercialStop" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCommercialTrack" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowCountryCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowDifferenceInMinutes" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowEstimateSource" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowLiveEstimateTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowScheduledTime" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowStationShortCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowStationUICCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowTrainReadyAccepted" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowTrainReadySource" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowTrainReadyTimestamp" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowTrainStopping" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timeTableRowType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timetableAcceptanceDate" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="timetableType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="trainCategory" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="trainNumber" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trainType]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="trainType" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[version]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="version" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\load train45\land train45"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="land train45"
               usesDispositions="true"
               version="4">
               <properties>
@@ -1444,7 +427,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\load train45\land train45.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LocalHost.TrainTraffic]"
                   connectionManagerRefId="Package.ConnectionManagers[LocalHost.TrainTraffic]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1452,491 +435,491 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\load train45\land train45.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cancelled]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[cancelled]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="cancelled"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[cancelled]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[cancelled]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[commuterLineID]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[commuterLineID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="commuterLineID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[commuterLineID]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[commuterLineID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[departureDate]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[departureDate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="departureDate"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[departureDate]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[departureDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[operatorShortCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[operatorShortCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="operatorShortCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorShortCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorShortCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[operatorUICCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[operatorUICCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="operatorUICCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[operatorUICCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorUICCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[runningCurrently]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[runningCurrently]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="runningCurrently"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[runningCurrently]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[runningCurrently]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowActualTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowActualTime]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowActualTime"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCancelled]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCancelled]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCancelled"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesCategoryCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesCategoryCodeId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesCategoryCodeId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesDetailedCategoryCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesDetailedCategoryCodeId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesDetailedCategoryCodeId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesThirdCategoryCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCausesThirdCategoryCodeId]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCausesThirdCategoryCodeId"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialStop]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialStop]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCommercialStop"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialTrack]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCommercialTrack]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCommercialTrack"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowCountryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowCountryCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowCountryCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowDifferenceInMinutes]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowDifferenceInMinutes]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowDifferenceInMinutes"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowEstimateSource]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowEstimateSource]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowEstimateSource"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowLiveEstimateTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowLiveEstimateTime]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowLiveEstimateTime"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowScheduledTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowScheduledTime]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowScheduledTime"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowStationShortCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowStationShortCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowStationShortCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowStationUICCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowStationUICCode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowStationUICCode"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyAccepted]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyAccepted]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowTrainReadyAccepted"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadySource]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadySource]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowTrainReadySource"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyTimestamp]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainReadyTimestamp]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowTrainReadyTimestamp"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainStopping]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowTrainStopping]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowTrainStopping"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timeTableRowType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timeTableRowType]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timeTableRowType"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timeTableRowType]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowType]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timetableAcceptanceDate]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timetableAcceptanceDate]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timetableAcceptanceDate"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[timetableType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[timetableType]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="timetableType"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[timetableType]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableType]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[trainCategory]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[trainCategory]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="trainCategory"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainCategory]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainCategory]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[trainNumber]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[trainNumber]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="trainNumber"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainNumber]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainNumber]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[trainType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[trainType]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="trainType"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[trainType]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainType]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[version]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].Columns[version]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="version"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[version]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[version]" />
+                      externalMetadataColumnId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[version]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PKrow]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[PKrow]"
                       dataType="i4"
                       name="PKrow" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[cancelled]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="cancelled" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[commuterLineID]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="commuterLineID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[departureDate]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="departureDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[operatorShortCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="operatorShortCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[operatorUICCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="operatorUICCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[runningCurrently]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="runningCurrently" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowActualTime]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowActualTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCancelled]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCancelled" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesCategoryCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesCategoryCodeId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesCategoryCodeId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesDetailedCategoryCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesDetailedCategoryCodeId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesThirdCategoryCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCausesThirdCategoryCodeId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialStop]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCommercialStop" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCommercialTrack]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCommercialTrack" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowCountryCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowCountryCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowDifferenceInMinutes]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowDifferenceInMinutes" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowEstimateSource]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowEstimateSource" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowLiveEstimateTime]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowLiveEstimateTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowScheduledTime]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowScheduledTime" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationShortCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowStationShortCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowStationUICCode]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowStationUICCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyAccepted]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowTrainReadyAccepted" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadySource]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowTrainReadySource" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainReadyTimestamp]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowTrainReadyTimestamp" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowTrainStopping]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowTrainStopping" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timeTableRowType]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timeTableRowType" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timetableAcceptanceDate]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timetableAcceptanceDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[timetableType]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="timetableType" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainCategory]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="trainCategory" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainNumber]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="trainNumber" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[trainType]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="trainType" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[version]"
+                      refId="Package\load train45\land train45.Inputs[OLE DB Destination Input].ExternalColumns[version]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -1946,22 +929,1039 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\load train45\land train45.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\load train45\land train45.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\load train45\land train45.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\load train45\land train45.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\load train45\land train45.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\load train45\land train45.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load train45\train45"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1053"
+              name="train45"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load train45\train45.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV_train45]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV_train45]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load train45\train45.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[cancelled]"
+                      name="cancelled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[commuterLineID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[commuterLineID]"
+                      name="commuterLineID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[departureDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[departureDate]"
+                      name="departureDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorShortCode]"
+                      name="operatorShortCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[operatorUICCode]"
+                      name="operatorUICCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[runningCurrently]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[runningCurrently]"
+                      name="runningCurrently"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowActualTime]"
+                      name="timeTableRowActualTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCancelled]"
+                      name="timeTableRowCancelled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCode]"
+                      name="timeTableRowCausesCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesCategoryCodeId]"
+                      name="timeTableRowCausesCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCode]"
+                      name="timeTableRowCausesDetailedCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesDetailedCategoryCodeId]"
+                      name="timeTableRowCausesDetailedCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCode]"
+                      name="timeTableRowCausesThirdCategoryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCausesThirdCategoryCodeId]"
+                      name="timeTableRowCausesThirdCategoryCodeId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialStop]"
+                      name="timeTableRowCommercialStop"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCommercialTrack]"
+                      name="timeTableRowCommercialTrack"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowCountryCode]"
+                      name="timeTableRowCountryCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowDifferenceInMinutes]"
+                      name="timeTableRowDifferenceInMinutes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowEstimateSource]"
+                      name="timeTableRowEstimateSource"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowLiveEstimateTime]"
+                      name="timeTableRowLiveEstimateTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowScheduledTime]"
+                      name="timeTableRowScheduledTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationShortCode]"
+                      name="timeTableRowStationShortCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowStationUICCode]"
+                      name="timeTableRowStationUICCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyAccepted]"
+                      name="timeTableRowTrainReadyAccepted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadySource]"
+                      name="timeTableRowTrainReadySource"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainReadyTimestamp]"
+                      name="timeTableRowTrainReadyTimestamp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowTrainStopping]"
+                      name="timeTableRowTrainStopping"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timeTableRowType]"
+                      name="timeTableRowType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableAcceptanceDate]"
+                      name="timetableAcceptanceDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[timetableType]"
+                      name="timetableType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainCategory]"
+                      name="trainCategory"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainNumber]"
+                      name="trainNumber"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainType]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[trainType]"
+                      name="trainType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[version]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[version]"
+                      length="50"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Output].Columns[version]"
+                      name="version"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cancelled" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[commuterLineID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="commuterLineID" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[departureDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="departureDate" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[operatorShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[operatorUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="operatorUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[runningCurrently]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="runningCurrently" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowActualTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowActualTime" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCancelled" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesDetailedCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesDetailedCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCausesThirdCategoryCodeId]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCausesThirdCategoryCodeId" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialStop]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialStop" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCommercialTrack]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCommercialTrack" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowCountryCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowCountryCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowDifferenceInMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowDifferenceInMinutes" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowEstimateSource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowEstimateSource" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowLiveEstimateTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowLiveEstimateTime" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowScheduledTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowScheduledTime" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationShortCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationShortCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowStationUICCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowStationUICCode" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyAccepted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyAccepted" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadySource]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadySource" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainReadyTimestamp]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainReadyTimestamp" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowTrainStopping]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowTrainStopping" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timeTableRowType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timeTableRowType" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timetableAcceptanceDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableAcceptanceDate" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[timetableType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="timetableType" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainCategory]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainCategory" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainNumber]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainNumber" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[trainType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trainType" />
+                    <externalMetadataColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Output].ExternalColumns[version]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="version" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load train45\train45.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load train45\train45.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1972,10 +1972,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\load train45.Paths[Flat File Source Output]"
+              endId="Package\load train45\land train45.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\load train45\train45.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1994,34 +1994,34 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
+          Size="136,42"
+          Id="Package\load train45"
           TopLeft="131,69" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\load train45">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Flat File Source"
+          Size="113,42"
+          Id="Package\load train45\train45"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
+          Size="136,42"
+          Id="Package\load train45\land train45"
           TopLeft="129,319" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="83.5,47.5">
+          Id="Package\load train45.Paths[Flat File Source Output]"
+          TopLeft="62,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="134,271.5"
+              EndConnector="135,271.5"
               Start="0,0"
-              End="134,264">
+              End="135,264">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2032,13 +2032,13 @@
                     Point2="0,135.75"
                     Point3="4,135.75" />
                   <mssgle:LineSegment
-                    End="130,135.75" />
+                    End="131,135.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="130,135.75"
-                    Point2="134,135.75"
-                    Point3="134,139.75" />
+                    Point1="131,135.75"
+                    Point2="135,135.75"
+                    Point3="135,139.75" />
                   <mssgle:LineSegment
-                    End="134,264" />
+                    End="135,264" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2051,7 +2051,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\load train45\land train45">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
