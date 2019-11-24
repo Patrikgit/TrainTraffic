@@ -23,7 +23,10 @@
         end as TrainReadyTime
       ,[timeTableRowTrainStopping] as TrainStopping
       ,[timeTableRowType] as DepatureArrival
-      ,[timetableAcceptanceDate] AcceptanceDate
+      ,case [timetableAcceptanceDate] 
+		when '' then null 
+		else cast([timetableAcceptanceDate] as datetime) 
+		end as AcceptanceDate
       ,[timetableType] 
       ,[trainCategory] TrainCategory
       ,[trainNumber] as TrainNumber 
