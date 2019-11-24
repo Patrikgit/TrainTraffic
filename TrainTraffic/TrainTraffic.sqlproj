@@ -60,9 +60,11 @@
     <Folder Include="Security" />
     <Folder Include="Tables" />
     <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Users" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\CREATE TABLE land.train45.sql" />
     <Build Include="Security\Schemas\CREATE SCHEMAS.sql" />
+    <Build Include="Security\Users\BIreport.sql" />
   </ItemGroup>
 </Project>
