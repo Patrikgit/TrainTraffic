@@ -14,7 +14,8 @@
       ,case timeTableRowLiveEstimateTime 
         when '' then null
         else cast([timeTableRowLiveEstimateTime] as [datetime]) end as LiveEstimateTime
-      ,cast([timeTableRowScheduledTime] as [datetime]) as ScheduledTime
+      ,cast([timeTableRowScheduledTime] as [datetime]) as ScheduledDateTime
+	  ,cast(substring(timeTableRowScheduledTime,12,5) as time) as ScheduledTime
 	  ,case timeTableRowActualTime
 		when '' then null
 		else cast(substring(timeTableRowActualTime,12,5) as time)
@@ -24,13 +25,13 @@
       ,case timeTableRowTrainReadyTimestamp 
         when '' then null
         else cast([timeTableRowTrainReadyTimestamp] as [datetime]) 
-        end as TrainReadyTime
+        end as TrainReadyDateTime
       ,[timeTableRowTrainStopping] as TrainStopping
       ,[timeTableRowType] as DepatureArrival
       ,case [timetableAcceptanceDate] 
 		when '' then null 
 		else cast([timetableAcceptanceDate] as datetime) 
-		end as AcceptanceDate
+		end as AcceptanceDateTime
       ,[trainCategory] TrainCategory
       ,[trainNumber] as TrainNumber 
       ,[trainType] TrainType
