@@ -22,6 +22,7 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <TargetDatabase>TrainTraffic</TargetDatabase>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -58,9 +59,12 @@
     <Folder Include="Properties" />
     <Folder Include="Security" />
     <Folder Include="Tables" />
+    <Folder Include="Security\Schemas" />
+    <Folder Include="Security\Roles" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Security\CREATE SCHEMAS.sql" />
     <Build Include="Tables\CREATE TABLE land.train45.sql" />
+    <Build Include="Security\Schemas\CREATE SCHEMAS.sql" />
+    <Build Include="Security\Roles\BIreport.sql" />
   </ItemGroup>
 </Project>
