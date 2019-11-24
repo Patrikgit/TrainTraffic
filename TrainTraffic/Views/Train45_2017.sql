@@ -1,7 +1,7 @@
 ﻿CREATE VIEW [dbo].[Train45_2017]
 	AS  SELECT 
       cast([departureDate] as date) as DepartureDate
-      ,[runningCurrently]
+      ,[runningCurrently] as RunningNow
       ,case timeTableRowActualTime  
          when '' then null 
         else cast([timeTableRowActualTime] as [datetime]) 
@@ -27,7 +27,6 @@
 		when '' then null 
 		else cast([timetableAcceptanceDate] as datetime) 
 		end as AcceptanceDate
-      ,[timetableType] 
       ,[trainCategory] TrainCategory
       ,[trainNumber] as TrainNumber 
       ,[trainType] TrainType
