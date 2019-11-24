@@ -5,16 +5,20 @@
       ,case timeTableRowActualTime  
          when '' then null 
         else cast([timeTableRowActualTime] as [datetime]) 
-        end as ActualTime
+        end as ActualDateTime
       ,[timeTableRowCancelled] as Cancelled
       ,[timeTableRowCommercialStop] as CommercialStop
       ,[timeTableRowCommercialTrack] as CommercialTrack
-      ,[timeTableRowDifferenceInMinutes] MinuteDifference
+      ,cast([timeTableRowDifferenceInMinutes] as int) as MinuteDifference
       ,[timeTableRowEstimateSource] as EstimateSource
       ,case timeTableRowLiveEstimateTime 
         when '' then null
-        else cast([timeTableRowLiveEstimateTime] as [datetime]) end as timeTableRowLiveEstimateTime
+        else cast([timeTableRowLiveEstimateTime] as [datetime]) end as LiveEstimateTime
       ,cast([timeTableRowScheduledTime] as [datetime]) as ScheduledTime
+	  ,case timeTableRowActualTime
+		when '' then null
+		else cast(substring(timeTableRowActualTime,12,5) as time)
+		end as ActualTime
       ,[timeTableRowStationShortCode] as StationCode
       ,[timeTableRowTrainReadyAccepted] as TrainReadyAccepted 
       ,case timeTableRowTrainReadyTimestamp 
